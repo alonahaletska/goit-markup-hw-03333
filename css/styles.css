@@ -40,14 +40,15 @@ h1, h2, h3, h4, p{
 
 .container{
     width: 1200px;
-    /*padding-left: 20px;
-    padding-right: 20px;*/
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 .header{
     padding-top: 24px;
     padding-bottom: 24px;
+    border-bottom: 1px solid #ECECEC;
     background: var(--white-bgr-color);
 }
 
@@ -55,6 +56,8 @@ h1, h2, h3, h4, p{
     display: flex;
     align-items: center;
 }
+
+
 
 .header-link,
 .footer-link{
@@ -104,8 +107,11 @@ h1, h2, h3, h4, p{
     align-items: center;
     margin-left: auto;
 }
-.header-contact{
+
+.header-item+.header-item{
     margin-left: 50px;
+}
+.header-contact{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -154,6 +160,24 @@ h1, h2, h3, h4, p{
 .hero-button:focus{
     background: #188CE8;
 }
+.about{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.about-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-item{
+    width: 270px;
+    margin-right: 30px;
+}
+
+.about-item:last-child{
+    margin-right: 0px;
+}
 .about-title{
     font-weight: 700;
     line-height: 1.14;
@@ -163,6 +187,20 @@ h1, h2, h3, h4, p{
     font-weight: 400;
     color: var(--gray-txt-color);
 }
+
+.services-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.services-item{
+    margin-right: 30px;
+    margin-top: 50px;
+    width: 370px;
+}
+.services-item:last-child{
+    margin-right: 0px;
+}
+
 .services-title{
     font-weight: 700;
     font-size: 36px;
@@ -172,6 +210,23 @@ h1, h2, h3, h4, p{
 .team{
     background: var(--primary-white-bgr-color);
 }
+
+.team-list{
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.team-item{
+    margin-right: 30px;
+}
+
+.team-item:last-child{
+    margin-right: 0px;
+}
+
+.team-image{
+    margin-bottom: 30px;
+}
 .team-title{
     font-weight: 700;
     font-size: 36px;
@@ -179,6 +234,10 @@ h1, h2, h3, h4, p{
     text-align: center;
 }
 .team-name{
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -224,23 +283,11 @@ color:var(--gray-txt-color);
 
 /*Портфолио*/
 
-
-
-
-.portfolio-title{
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+.filter-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
-
-.portfolio-text{
-font-weight: 400;
-font-size: 16px;
-line-height: 1.88;
-color: var(--gray-txt-color);
-}
-
 .filter-button.current{
     cursor: pointer;
     font-weight: 500;
@@ -269,4 +316,34 @@ color: var(--gray-txt-color);
 .filter-button:focus{
     background:var(--blue-txt-color);
     color: var(--white-txt-color);
+}
+.potfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.portfolio-item{
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.portfolio-item:nth-child(3n){
+    margin-right: 0px;
+}
+.portfolio-item:nth-last-child(-n+3){
+    margin-bottom: 0px;
+}
+.portfolio-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.portfolio-text{
+font-weight: 400;
+font-size: 16px;
+line-height: 1.88;
+color: var(--gray-txt-color);
 }
